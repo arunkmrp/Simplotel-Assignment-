@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simplotel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Order</a>
+        <a href="#">Food</a>
+        <a href="#">Restaurant</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="menu-bar">
+        <img src="./menu-bar.png" alt="menu-bar-logo" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="content-left">
+        <h1>LOREM IPSUM</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id
+          est vitae dolor rhoncus tristique. Maecenas metus quam, rhoncus
+          euismod lorem in, sollicitudin viverra eros. Donec dictum luctus quam
+          ut tristique. Curabitur nec faucibus purus. Quisque congue sem nec
+          justo mollis, in tincidunt erat pretium. Sed pulvinar, massa ac porta
+          viverra.
+        </p>
+        <button>Click Me</button>
+      </div>
+      <div class="content-right">
+        <img src="./pexels-robin-stickel-70497.jpg" />
+      </div>
+    </div>
+
+    <div class="secondary-section">
+      <div class="scontent-left">
+        <div class="image-box">
+          <img
+            id="Img1"
+            src="./pexels-rachel-claire-6752433.jpg"
+            alt="sample-Image-1"
+          />
+          <img
+            id="Img2"
+            src="./pexels-eva-bronzini-6141651.jpg"
+            alt="sample-Image-2"
+          />
+        </div>
+        <img
+          id="Img3"
+          src="./pexels-mister-mister-3434523.jpg"
+          alt="sample-Image-3"
+        />
+      </div>
+      <div class="scontent-right">
+        <h4>LOREM IPSUM</h4>
+        <h1>LOREM IPSUM SET ADEMIR</h1>
+        <div class="arrow">
+          <h5>Click</h5>
+          <img src="./" alt="arrow" />
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuBar = document.querySelector(".menu-bar");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuBar.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

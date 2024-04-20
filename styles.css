@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background: linear-gradient(to right, #f8f8ad, #ffa9f7);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(
+    to right bottom,
+    rgba(248, 248, 173, 0.8),
+    rgba(255, 169, 247, 0.8)
+  );
+}
+
+/* NavBar */
+
+/* Navbar styling */
+.nav-bar {
+  background-color: #ff7070;
+  padding: 7.5px 226.7px; /* Set padding to provided values */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  color: #101010;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 29px; /* Set font size to provided value */
+  letter-spacing: 3px; /* Set letter spacing to provided value */
+}
+
+/* Menu bar */
+.menu-bar {
+  margin-left: 52.91px; /* Set margin-left to provided value */
+}
+
+.menu-bar img {
+  width: 40px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 1462px) {
+  .nav-bar {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .nav-links {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column; /* Display links vertically for smaller screens */
+    align-items: center; /* Align links to the right for smaller screens */
+    position: absolute;
+    top: 60px; /* Adjust top position to avoid overlapping with menu bar */
+    right: 0;
+    background-color: #ff7070; /* Background color for navigation links */
+    width: 100%; /* Full width for smaller screens */
+    max-height: 0; /* Initially hide links */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.3s ease; /* Add smooth transition effect */
+  }
+
+  .nav-links.active {
+    max-height: 210px; /* Show links when active */
+  }
+
+  .nav-links a {
+    margin: 10px 0; /* Adjust margin between links for smaller screens */
+    font-size: 14px;
+  }
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+}
+
+/* Content Left and Right */
+.content-left,
+.content-right {
+  flex: 50%;
+  height: calc(
+    100vh - 74.5px
+  ); /* 80px is the height of the navbar, adjust as needed */
+}
+
+/* Content Left */
+.content-left {
+  padding-top: 220px;
+  padding-left: 109px;
+  padding-right: 110px;
+}
+
+.content-left h1 {
+  text-align: left;
+  letter-spacing: 12px;
+  font-size: 80px;
+  font-weight: 1100;
+  font-family: Calibri, sans-serif; /* Set font to Calibri */
+}
+.content-left p {
+  padding-top: 80px;
+  text-align: left;
+  font-size: 28px;
+  margin-top: 20px;
+  font-family: Calibri, sans-serif; /* Set font to Calibri */
+}
+.content-left button {
+  margin-top: 90px;
+  background-color: #ff7070;
+  padding: 20px 123px; /* Add padding to the button */
+  font-size: 20px; /* Adjust the font size of the button */
+  color: #fff; /* Set the button text color */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add pointer cursor on hover */
+}
+
+/* Image */
+.content-right img {
+  width: 100%;
+  height: calc(100vh - 74.5px);
+  object-fit: cover; /* Ensure image covers the entire container */
+}
+
+/* Secondary Content Section */
+.secondary-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+/* Styles for the left content section */
+.scontent-left {
+  flex-basis: 50%;
+  display: flex; /* Use flexbox to control the layout */
+}
+.image-box {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  margin-top: 245px;
+  margin-left: 150px;
+  margin-bottom: 245px;
+}
+
+/* Styles for the first two images */
+#Img1,
+#Img2 {
+  width: 95%; /* Ensure images fill their container */
+  height: 50%; /* Set height to 50% */
+  display: block; /* Remove any default inline styling */
+  object-fit: cover;
+}
+#Img2 {
+  padding-top: 15px;
+}
+
+/* Styles for the third image */
+#Img3 {
+  margin-top: 245px;
+  margin-bottom: 245px;
+  width: 380px; /* Set width to 48% to allow space for margin */
+  display: block; /* Remove any default inline styling */
+  padding-left: 20px;
+  object-fit: cover;
+  max-height: 100vh;
+}
+
+.scontent-right {
+  flex-basis: 50%;
+  background-color: #ff7070;
+  margin-top: 355px;
+  margin-right: 225px;
+  margin-bottom: 355px;
+  margin-left: 69px;
+}
+.scontent-right h4 {
+  padding-top: 45px;
+  padding-left: 45px;
+  font-size: 21px;
+  font-weight: normal;
+  font-family: "TT Norms Pro", Arial, sans-serif;
+}
+
+.scontent-right h1 {
+  padding-top: 46px;
+  padding-left: 45px;
+  padding-bottom: 50px;
+  line-height: 0.9;
+  text-align: left;
+  letter-spacing: 12px;
+  font-size: 67px;
+  font-weight: 1100;
+  font-family: "TT Norms Pro", Arial, sans-serif;
+}
+
+.scontent-right h5 {
+  padding-left: 45px;
+  font-size: 21px;
+  font-weight: normal;
+  font-family: "TT Norms Pro", Arial, sans-serif;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+}
+.arrow img {
+  margin-left: 17px;
+  cursor: pointer;
+}
