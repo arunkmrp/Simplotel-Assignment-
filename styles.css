@@ -31,7 +31,7 @@ body::before {
 /* Navbar styling */
 .nav-bar {
   background-color: #ff7070;
-  padding: 7.5px 226.7px; /* Set padding to provided values */
+  padding: 10px 226.7px; /* Set padding to provided values */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,9 +103,6 @@ body::before {
 .content-left,
 .content-right {
   flex: 50%;
-  height: calc(
-    100vh - 74.5px
-  ); /* 80px is the height of the navbar, adjust as needed */
 }
 
 /* Content Left */
@@ -142,8 +139,39 @@ body::before {
 /* Image */
 .content-right img {
   width: 100%;
-  height: calc(100vh - 74.5px);
+  height: calc(100vh - 60px);
   object-fit: cover; /* Ensure image covers the entire container */
+}
+
+@media (max-width: 1462px) {
+  .main-content {
+    flex-direction: column;
+    width: 100vw;
+    height: auto; /* Adjust height to auto for content to fit naturally */
+  }
+  .content-left,
+  .content-right {
+    padding: 0; /* Remove padding for both content sections */
+    text-align: center; /* Center align content */
+    width: 100%; /* Ensure content takes full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  .content-left h1 {
+    font-size: 60px; /* Decrease font size for smaller screens */
+    letter-spacing: 8px; /* Adjust letter spacing */
+  }
+  .content-left p {
+    font-size: 20px; /* Decrease font size for smaller screens */
+    padding: 20px; /* Add padding to paragraphs */
+  }
+  .content-left button {
+    margin-top: 40px; /* Reduce top margin for button */
+    padding: 15px 50px; /* Adjust button padding */
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+  .content-right img {
+    height: auto; /* Allow image to adjust its height naturally */
+  }
 }
 
 /* Secondary Content Section */
@@ -192,11 +220,10 @@ body::before {
 .scontent-right {
   flex-basis: 50%;
   background-color: #ff7070;
-  margin-top: 355px;
-  margin-right: 225px;
-  margin-bottom: 355px;
-  margin-left: 69px;
+  width: 80%;
+  margin: 355px 225px 355px 69px; /* Apply calculated margin */
 }
+
 .scontent-right h4 {
   padding-top: 45px;
   padding-left: 45px;
@@ -206,13 +233,13 @@ body::before {
 }
 
 .scontent-right h1 {
-  padding-top: 46px;
+  padding-top: 43px;
   padding-left: 45px;
-  padding-bottom: 50px;
+  padding-bottom: 33px;
   line-height: 0.9;
   text-align: left;
   letter-spacing: 12px;
-  font-size: 67px;
+  font-size: 60px;
   font-weight: 1100;
   font-family: "TT Norms Pro", Arial, sans-serif;
 }
@@ -231,4 +258,47 @@ body::before {
 .arrow img {
   margin-left: 17px;
   cursor: pointer;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 1462px) {
+  .secondary-section {
+    flex-direction: column;
+    width: 100vw;
+    max-height: 100vh;
+  }
+  .scontent-left,
+  .scontent-right {
+    padding: 0; /* Remove padding for both content sections */
+    text-align: center; /* Center align content */
+    width: 100vw; /* Ensure content takes full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  .scontent-left {
+    width: 100vw;
+    height: auto;
+    flex-basis: 50%;
+    display: flex;
+  }
+  .image-box {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  #Img1,
+  #Img2 {
+    display: block; /* Remove any default inline styling */
+    object-fit: cover;
+  }
+  #Img3 {
+    margin: 0;
+  }
+
+  .scontent-right {
+    margin: 0;
+    background-color: #ff7070;
+    width: 100vw;
+    text-align: center;
+  }
 }
