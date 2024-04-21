@@ -147,30 +147,36 @@ body::before {
   .main-content {
     flex-direction: column;
     width: 100vw;
-    height: auto; /* Adjust height to auto for content to fit naturally */
+    height: calc(100vh - 60px);
   }
   .content-left,
   .content-right {
     padding: 0; /* Remove padding for both content sections */
     text-align: center; /* Center align content */
     width: 100%; /* Ensure content takes full width */
+    height: 50vh;
     box-sizing: border-box; /* Include padding in width calculation */
   }
   .content-left h1 {
-    font-size: 60px; /* Decrease font size for smaller screens */
+    margin-top: 2%;
+    font-size: 28px; /* Decrease font size for smaller screens */
     letter-spacing: 8px; /* Adjust letter spacing */
+    text-align: center;
   }
   .content-left p {
-    font-size: 20px; /* Decrease font size for smaller screens */
-    padding: 20px; /* Add padding to paragraphs */
+    font-size: 18px; /* Decrease font size for smaller screens */
+    margin: 5%;
+    padding: 0;
+    text-align: center;
   }
   .content-left button {
-    margin-top: 40px; /* Reduce top margin for button */
+    margin-top: 2%; /* Reduce top margin for button */
     padding: 15px 50px; /* Adjust button padding */
     font-size: 18px; /* Decrease font size for smaller screens */
   }
   .content-right img {
-    height: auto; /* Allow image to adjust its height naturally */
+    height: 100%; /* Allow image to adjust its height naturally */
+    object-fit: cover;
   }
 }
 
@@ -268,37 +274,55 @@ body::before {
     width: 100vw;
     max-height: 100vh;
   }
-  .scontent-left,
-  .scontent-right {
-    padding: 0; /* Remove padding for both content sections */
-    text-align: center; /* Center align content */
-    width: 100vw; /* Ensure content takes full width */
-    box-sizing: border-box; /* Include padding in width calculation */
-  }
   .scontent-left {
     width: 100vw;
-    height: auto;
-    flex-basis: 50%;
+    box-sizing: border-box;
+  }
+  .scontent-left {
+    margin-top: 10px;
+    width: 100%;
+    height: 75vh;
     display: flex;
+    justify-content: center; /* Center align content horizontally */
+    align-items: center; /* Center align content vertically */
   }
   .image-box {
+    height: 75vh;
     display: flex;
     flex-direction: column;
     margin: 0;
+    width: 48%; /* Adjust width for image box to take up around 48% of the screen */
   }
   #Img1,
   #Img2 {
-    display: block; /* Remove any default inline styling */
+    width: 100%; /* Adjust width to fill the image box */
+    max-width: 100%; /* Ensure images don't exceed their container */
+    height: 50%; /* Allow images to adjust their height */
     object-fit: cover;
   }
   #Img3 {
-    margin: 0;
+    width: 48%; /* Adjust width for image 3 to take up around 48% of the screen */
+    max-width: 100%; /* Ensure image doesn't exceed its container */
+    /* Added: Set the height of Img3 to match the height of .scontent-left */
+    height: 100%;
+    object-fit: cover;
   }
-
   .scontent-right {
-    margin: 0;
-    background-color: #ff7070;
-    width: 100vw;
-    text-align: center;
+    height: 25vh;
+    width: 96vw; /* Adjust the width of the container */
+    margin: 10px auto; /* Center the container horizontally */
+    padding: 0;
+  }
+  .scontent-right h1 {
+    font-size: 25px;
+    padding: 5px;
+  }
+  .scontent-right h4 {
+    font-size: 15px;
+    padding: 5px;
+    text-align: left;
+  }
+  .arrow h5 {
+    padding-left: 5px;
   }
 }
